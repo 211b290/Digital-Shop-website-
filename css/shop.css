@@ -1,0 +1,51 @@
+.shopCont{
+    margin: 40px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* background-color: snow; */
+}
+.firstRow{
+    width: 25%;
+    border: snow;
+}
+.pic img{
+    width: 100%;
+    border-radius: 25px;
+}
+.detail{
+    margin: 3px 0px;
+    padding: 5px 0px;
+    /* display: flex;
+    margin: 4px 3px;
+    align-items: center; */
+    /* justify-content: space-around; */
+}
+.shopbtn{
+   width: 100%;
+   margin: 5px 0px;
+   padding: 10px 20px;
+   border-radius: 20px;
+}
+.heading
+{
+    /* background-color: red; */
+    /* margin: 21px 0px; */
+    padding: 11px 80px;
+}
+.heading h1{
+    color: dimgray;
+    text-align: center;
+}
+.pic1 img{
+    width: 80%;
+    border-radius: 25px;
+}
+.firstRow:hover{
+    border-radius: 20px;
+    box-shadow: 1px 3px 5px 5px rgb(180, 179, 179);
+}
+/* .left
+{
+    margin:0px 40px ;
+} */
