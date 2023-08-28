@@ -6,26 +6,51 @@
     <title>Ekart | e-commerce website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
 </head>
 <body>
-    <nav id="navigation">
-        <div class="logo">
-            <h1>Ekart</h1>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="#"><h2>Ekart</h2></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/shop.html">Shop</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Contact us</a></li>
+                  <li><a class="dropdown-item" href="#">Feedback</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <div class="img-ctrl">
+                <img src="icons/cart.png" alt=""></a>
+            <img src="icons/user.png" alt=""></a>
+            </div>
+            
+            <!-- <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> -->
+          </div>
         </div>
-        <ul class="nav-items">
-            <li> <a href="">Home</a></li>
-            <li><a href="/shop.html">Shop</a></li>
-            <li><a href="">Product</a></li>
-            <li><a href="">Page</a></li>
-            <li><a href="">Docs</a></li>
-        </ul>
-        <div class="side-item">
-            <img src="icons/search.svg" alt="">
-            <img src="icons/cart.png" alt="">
-            <img src="icons/user.png" alt="">
-            <img src="icons/menu.png" alt="">
-        </div>
-    </nav>
+      </nav>
 
     <div class="bannerSection">
         <!-- <div class="banner1Img">
@@ -238,6 +263,7 @@
         </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
 </body>
 </html>
