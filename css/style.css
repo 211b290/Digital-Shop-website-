@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Preahvihear&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Preahvihear&family=Ubuntu:ital@1&display=swap');
 
 
 /* navbar css */
@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: "Preahvihear", sans-serif;
+  font-family: "Ubuntu", sans-serif !important;
 }
 #navigation {
   display: flex;
