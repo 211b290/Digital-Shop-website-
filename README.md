@@ -1,47 +1,84 @@
-# MERN E-COMMERCE TUTORIAL
+# mern-ecommerce
 
-Hi! My name is **Abhishek Singh**, I have created this tutorial to teach MERN Stack for free on YouTube.
+> Frontend-> React JS
 
-# Prerequisite
+> Backend-> Node JS & Express JS
 
-1.  Must have basic knowledge of **Node**, **React**, **Express**, **MongoDB** . _I have made tutorial on each technology on YouTube , make sure to check it out_. **Links are Below respectively**
-2.  Node - https://youtu.be/BSO9C8Z-YV8
-3.  React - https://youtu.be/99kgUCIMboY
-4.  Express - https://youtu.be/teipbke8c4A\
-5.  MongoDB - https://youtu.be/AYDP1S5BbTo
-6.  RestApi - https://youtu.be/AhCSfuG9Jxw _(optional)_
+> Database-> MongoDB
 
-# Install Dependencies
+## Installation process
+1. #### clone the repo using this command
+    ```bash
+    git clone https://github.com/ashraf-kabir/mern-ecommerce.git
+    ```
+2. #### install npm packages
+    1. install backend packages
+    ```bash
+    cd mern-ecommerce
+    npm install
+    ```
+    2. install frontend packages
+    ```bash
+    cd client
+    npm install
+    ```
+3. go to the parent folder of mern-ecommerce & create .env for connection, JWT_SECRET, BRAINTREE_MERCHANT_ID, BRAINTREE_PUBLIC_KEY and BRAINTREE_PRIVATE_KEY.
 
-**For Backend** - `npm i`
+    ```bash
+    cd mern-ecommerce
+    sudo nano .env
+    ```
+    (ctrl+x to save & nano follow instruction there)
+    
+    ##### sample code for backend .env
+    ```env
+    MONGODB_URI=YOUR_MONGODB_URI
+    JWT_SECRET=YOUR_JWT_SECRET
+    BRAINTREE_MERCHANT_ID=YOUR_BRAINTREE_MERCHANT_ID
+    BRAINTREE_PUBLIC_KEY=YOUR_BRAINTREE_PUBLIC_KEY
+    BRAINTREE_PRIVATE_KEY=YOUR_BRAINTREE_PRIVATE_KEY
+    ```
+4.  create another .env file inside client directory for REACT_APP_API_URL.
 
-**For Frontend** - `cd frontend` ` npm i`
+    ```bash
+    cd mern-ecommerce/client
+    sudo nano .env
+    ```
+    ##### sample code for frontend .env
+    ```env
+    REACT_APP_API_URL=YOUR_API_URL
+    ```
+    ##### Instructions:
+    1. for mongodb atlas database creation follow this tutorial->https://www.youtube.com/watch?v=KKyag6t98g8
+    2. you can use any random string as JWTSECRET
+    3. for localhost REACT_APP_API_URL is http://localhost:5000/api
+       but for heroku (server deployment) it will be different
+    4. #### note: add .env on .gitignore
+    5. for server deployment use secrets directly
 
-## Env Variables
+5. <b>deploy this project</b> on your local server by using this command
+    ```bash
+    cd mern-ecommerce
+    npm run dev
+    ```
+    #### note: both backend & frontend server will start at once with the above command.
 
-Make Sure to Create a config.env file in backend/config directory and add appropriate variables in order to use the app.
+6. #### Database Structure: (Table: columns)
+    1. categories: _id, name, createdAt, updatedAt;
+    2. orders:  _id, status, products (Array), transaction_id, amount, address, user (Object), createdAt, updatedAt
+    3. products: _id, photo (Object), sold, name, description, price, category, shipping, quantity, createdAt, updatedAt
+    4. users: _id, role, history (Array), name, email, salt, hashed_password, createdAt, updatedAt
 
-**Essential Variables**
-PORT=
-DB_URI =
-STRIPE_API_KEY=
-STRIPE_SECRET_KEY=
-JWT_SECRET=
-JWT_EXPIRE=
-COOKIE_EXPIRE=
-SMPT_SERVICE =
-SMPT_MAIL=
-SMPT_PASSWORD=
-SMPT_HOST=
-SMPT_PORT=
-CLOUDINARY_NAME
-CLOUDINARY_API_KEY
-CLOUDINARY_API_SECRET
-_fill each filed with your info respectively_
+### App Description:
+    1. user can view all products
+    2. user can view single product
+    3. user can search products and view products by category and price range
+    4. user can add to cart checkout products using credit card info
+    5. user can register & sign in
+    6. admin can create, edit, update & delete products
+    7. admin can create categories
+    8. admin can view ordered products
+    9. admin can change the status of a product (processing, shipped, delivered, etc.)
 
-## Author
-
-**Instagram** Click [Here](https://www.instagram.com/meabhisingh) **@meAbhiSingh**
-**YouTube** Click [Here](https://www.youtube.com/channel/UCO7afj9AUo0zV69pqEYhcjw/) **6 Pack Programmer**
-**LinkedIn** Click [Here](https://in.linkedin.com/in/meabhisingh) **@meAbhiSingh**
-**Twitter** Click [Here](https://twitter.com/meAbhi_Singh) **@meAbhi_Singh**
+6. <b>Deployed on</br> https://ecommerce-ak.herokuapp.com/ 
+7. raise a star to support me
